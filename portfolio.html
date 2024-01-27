@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+                background-color: #2C001E; 
+                color: #FFFFFF; 
+                font-family: monospace; 
+                padding: 20px; 
+            }
+
+            @keyframes blink {
+                0% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+        a {
+            font-size: 15px;
+            color: #FFFFFF;
+            text-decoration: none; 
+            position: relative;
+            overflow: hidden;
+        }
+		
+		a:hover {
+            animation: blink 1s infinite; 
+        }
+
+        .cmd {
+            font-size: 15px;
+            color: #00FF00;
+            display: inline-block;
+            animation: blink 1s infinite; 
+        }
+
+    </style>
+    <style>
+        .terminal-text {
+            font-family: monospace;
+           
+            white-space: pre;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var preBlocks = document.querySelectorAll('.terminal-text');
+
+            preBlocks.forEach(function(preBlock) {
+                var originalText = preBlock.textContent;
+                preBlock.textContent = ''; // Clear the original text
+                speed = 1
+                if (preBlock.tagName != "PRE"){
+                    speed = 70
+                }
+                for (var index = 0; index < originalText.length; index++) {
+                    (function (char, i) {
+                        setTimeout(function() {
+                            preBlock.textContent += char;
+                        }, i * speed); // Adjust the delay as needed
+                    })(originalText.charAt(index), index);
+                }
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div style="color: #FFFFFF; width: 100%; overflow: hidden; display: flex; flex-direction: row;">
+        <pre class="terminal-text" style="color: #FFFFFF;">
+            
+        (                                           
+        )\ )              )  (          (           
+        (()/(      (    ( /(  )\ )       )\ (        
+        /(_)) (   )(   )\())(()/(   (  ((_))\   (   
+        (_))   )\ (()\ (_))/  /(_))  )\  _ ((_)  )\  
+        | _ \ ((_) ((_)| |_  (_) _| ((_)| | (_) ((_) 
+        |  _// _ \| '_||  _|  |  _|/ _ \| | | |/ _ \ 
+        |_|  \___/|_|   \__|  |_|  \___/|_| |_|\___/ 
+                                                    
+   
+        </pre>
+
+
+        <pre class="terminal-text" style="color: #FFFFFF; font-size: 10px">
+
+            (  )   /\   _                 (     
+             \ |  (  \ ( \.(               )                      _____
+           \  \ \  `  `   ) \             (  ___                 / _   \
+          (_`    \+   . x  ( .\            \/   \____-----------/ (o)   \_
+         - .-               \+  ;          (  O                           \____
+                       )        \_____________  `              \  /
+         (__                +- .( -'.- <. - _  VVVVVVV VV V\                 \/
+         (_____            ._._: <_ - <- _  (--  _AAAAAAA__A_/                  |
+           .    /./.+-  . .- /  +--  - .     \______________//_              \_______
+           (__ ' /x  / x _/ (                                  \___'          \     /
+          , x / ( '  . / .  /                                      |           \   /
+             /  /  _/ /    +                                      /              \/
+            '  (__/                                             /                  \
+     
+            
+     
+            </pre>
+
+    </div>
+    <div style="display: flex; flex-direction: column">
+        <div style="display: flex; flex-direction: row">
+            <span style="font-size: 15px; color: #00FF00;">User@Website:</span>
+            <span class="terminal-text" style="font-size: 15px; color: #4444f0;">~/Home/Portfolio</span>
+            <span class="terminal-text" style="font-size: 15px; color: #ffffff;">$</span>
+            <span class="terminal-text"style="opacity: 0; color: #ffffff;">_</span>
+            <span class="cmd terminal-text" style="color: #ffffff;" class="cmd">_</span>
+        </div>
+        <a class="terminal-text" href="index.html" style="font-size: 15px; color: #FFFFFF;">Home </a>
+        <a class="terminal-text" href="portfolio.html" style="font-size: 15px; color: #FFFFFF;">Portfolio </a>
+        <a class="terminal-text" href="resume.html" style="font-size: 15px; color: #FFFFFF;">Resume </a>
+        <a class="terminal-text" href="service.html" style="font-size: 15px; color: #FFFFFF;">Service </a>
+        <a class="terminal-text" href="AI.html" style="font-size: 15px; color: #FFFFFF;">AI </a>
+    </div>
+
+    <!-- <div style="display: flex; flex-direction: column">
+        <div style="display: flex; flex-direction: row;">
+            <h1 class="terminal-text"  style="width: 50%;">C-Threaded Database</h1>
+            <h1 class="terminal-text"  'style="width: 50%;">Description</h1>    
+        </div>
+
+        <div style="display: flex; flex-direction: row;">
+            <pre class="terminal-text" style="width: 50%;">
+            </pre>
+        
+            <pre class="terminal-text" style="width: 50%;">
+Simple C/C++ database which can have files uploaded to it in addition to giving files to clients in byte-sized chunks. Server uses raw sockets with tcp protocol.
+            </pre>
+    </div> -->
+    <div style="display: flex; flex-direction: column; flex-grow: 1; flex-shrink: 1;">
+        <a href="https://github.com/ivzap" style="padding: 20px">
+            <img src="github-desktop.svg" alt="GitHub Logo" width="75" height="75">
+        </a>
+    <div style="padding: 10px; flex-direction: column;">
+
+    <div style="display: flex; flex-direction: row; flex-grow: 1; flex-shrink: 1;">
+        <!-- LEFT TO RIGHT  -->
+
+        <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
+            <h1>C-threaded Database</h1>
+            <pre class="terminal-text">
+Server                                Client
++-------+                             +-------+
+|       |                             |       |
+| LISTEN|                             |       |
++-------+                             +-------+
+|                                      |
+|     SYN (seq=x)                      |
+| -----------------------------------> |
+|                                      |
+|                                      |
+|     SYN, ACK (seq=y, ack=x+1)       |
+| <----------------------------------- |
+|                                      |
+|                                      |
+|     ACK (ack=y+1, seq=x+1)           |
+| -----------------------------------> |
+|                                      |
+|                                      |
+|   Request for File                   |
+| <----------------------------------- |
+|                                      |
+|                                      |
+|   File Chunk [0, 1023]               |
+| -----------------------------------> |
+|                                      |
+              
+              
+            </pre>
+        </div>
+
+        <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
+            <h1>Description</h1>
+            <span style="flex-grow: 1; flex-shrink: 1;">
+                A straightforward database system with server and client components written in C/C++. Utilizes raw sockets and the TCP protocol to transfer files to clients or server in small, byte-sized segments. Facilitates both uploading and downloading functionalities. Client is implemented in Python to improve abstraction.            
+                <a href="https://github.com/ivzap/c-threaded-database" style="color: #4444f0;"> Checkout this repo on Github!</a>
+            </span>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Second Project -->
+    <div style="padding: 10px; flex-direction: column;">
+
+        <div style="display: flex; flex-direction: row; flex-grow: 1; flex-shrink: 1;">
+            <!-- LEFT TO RIGHT  -->
+    
+            <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
+                <h1>Bounded Buffer</h1>
+                <pre class="terminal-text">
++-----------------------------+
+|        Shared Buffer        |
++-----------------------------+
+| 1 | 2 | ... | Item N        |
++-----------------------------+
+^        ^        ^
+|        |        |
+Front   Worker   Worker
+
+[ Producer ] [ Consumer ]
+[  Thread  ] [  Thread  ]
+                </pre>
+            </div>
+    
+            <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
+                <h1>Description</h1>
+                <span>
+                    Simulating a PAC (Producer And Consumer) scenario, this exercise demonstrates the implementation of my C/C++ application with thread-safe features.
+                    <a href="https://github.com/ivzap/posix-threading-pac" style="color: #4444f0;"> Checkout this repo on Github!</a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <!-- Third Project -->
+    <div style="padding: 10px; flex-direction: column;">
+
+        <div style="display: flex; flex-direction: row; flex-grow: 1; flex-shrink: 1;">
+            <!-- LEFT TO RIGHT  -->
+    
+            <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
+                <h1>Programming SHELL</h1>
+                <pre class="terminal-text">
+___________________
+| _______________ |
+| |CMD:~$XXXXXXX| |
+| |XXXXXXXXXXXXX| |
+| |XXXXXXXXXXXXX| |
+| |XXXXXXXXXXXXX| |
+| |XXXXXXXXXXXXX| |
+|_________________|
+    _[_______]_
+___[___________]___
+|         [_____] []|__
+|         [_____] []|  \__
+L___________________J     \ \___\/
+___________________      /\
+/###################\    (__)
+                </pre>
+            </div>
+    
+            <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
+                <h1>Description</h1>
+                <span>
+                    A personalized C/C++ programming shell featuring input/output redirection and wildcard expansion. 
+                    <a href="https://github.com/ivzap/shell" style="color: #4444f0;"> Checkout this repo on Github!</a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+   
+      
+    
+    </div>
+
+
+    </div>
+</head>
+<body>
+    
+</body>
+</html>

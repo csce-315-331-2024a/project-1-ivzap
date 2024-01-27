@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+            background-color: #2C001E;
+            color: #FFFFFF; 
+            font-family: monospace; 
+            padding: 20px;
+        }
+		@keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+		a {
+            font-size: 15px;
+            color: #FFFFFF;
+            text-decoration: none; /* Remove underline */
+            position: relative;
+            overflow: hidden;
+        }
+		
+		a:hover {
+            animation: blink 1s infinite; /* 1s duration, infinite loop */
+        }
+
+        .cmd {
+            font-size: 15px;
+            color: #00FF00;
+            display: inline-block;
+            animation: blink 1s infinite; /* 1s duration, infinite loop */
+        }
+		.terminal-text {
+		font-family: monospace;
+	   
+		white-space: pre;
+	}
+</style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		var preBlocks = document.querySelectorAll('.terminal-text');
+
+		preBlocks.forEach(function(preBlock) {
+			var originalText = preBlock.textContent;
+			preBlock.textContent = ''; // Clear the original text
+			speed = 1
+			if (preBlock.tagName != "PRE"){
+				speed = 70
+			}
+			for (var index = 0; index < originalText.length; index++) {
+				(function (char, i) {
+					setTimeout(function() {
+						preBlock.textContent += char;
+					}, i * speed); // Adjust the delay as needed
+				})(originalText.charAt(index), index);
+			}
+		});
+	});
+</script>
+
+<div style="color: #FFFFFF; width: 100%; overflow: hidden; display: flex; flex-direction: row;">
+		<pre class="terminal-text">
+			
+	 (                           )                                       
+	 )\ )                     ( /(              (           )            
+	(()/(  )       )          )\())   )         )\    )  ( /(    )  (    
+	 /(_))/((   ( /(   (     ((_)\ ( /(  `  )  ((_)( /(  )\())( /(  )(   
+	(_)) (_))\  )(_))  )\ )   _((_))(_)) /(/(   _  )(_))(_))/ )(_))(()\  
+	|_ _|_)((_)((_)_  _(_/(  |_  /((_)_ ((_)_\ | |((_)_ | |_ ((_)_  ((_) 
+	 | | \ V / / _` || ' \))  / / / _` || '_ \)| |/ _` ||  _|/ _` || '_| 
+	|___| \_/  \__,_||_||_|  /___|\__,_|| .__/ |_|\__,_| \__|\__,_||_|   
+					    |_|
+	
+		</pre>
+
+
+		<pre class="terminal-text" style="color: #FFFFFF; font-size: 10px">
+
+	   (  )   /\   _                 (     
+	    \ |  (  \ ( \.(               )                      _____
+	  \  \ \  `  `   ) \             (  ___                 / _   \
+	 (_`    \+   . x  ( .\            \/   \____-----------/ (o)   \_
+	- .-               \+  ;          (  O                           \____
+				  )        \_____________  `              \  /
+	(__                +- .( -'.- <. - _  VVVVVVV VV V\                 \/
+	(_____            ._._: <_ - <- _  (--  _AAAAAAA__A_/                  |
+	  .    /./.+-  . .- /  +--  - .     \______________//_              \_______
+	  (__ ' /x  / x _/ (                                  \___'          \     /
+	 , x / ( '  . / .  /                                      |           \   /
+	    /  /  _/ /    +                                      /              \/
+	   '  (__/                                             /                  \
+
+	   
+
+		</pre>
+
+</div>
+<div style="display: flex; flex-direction: column">
+	<div style="display: flex; flex-direction: row">
+		<span style="font-size: 15px; color: #00FF00;">User@Website:</span>
+		<span class="terminal-text" style="font-size: 15px; color: #4444f0;">~/Home</span>
+		<span class="terminal-text" style="font-size: 15px; color: #ffffff;">$</span>
+		<span class="terminal-text" style="opacity: 0; color: #ffffff;">_</span>
+		<span class="cmd terminal-text" style="color: #ffffff;" class="cmd">_</span>
+	</div>
+	<a class="terminal-text" href="index.html" style="font-size: 15px; color: #FFFFFF;">Home </a>
+	<a class="terminal-text" href="portfolio.html" style="font-size: 15px; color: #FFFFFF;">Portfolio </a>
+	<a class="terminal-text" href="resume.html" style="font-size: 15px; color: #FFFFFF;">Resume </a>
+	<a class="terminal-text" href="service.html" style="font-size: 15px; color: #FFFFFF;">Service </a>
+	<a class="terminal-text" href="AI.html" style="font-size: 15px; color: #FFFFFF;">AI </a>
+</div>
+
+</div>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+
+
+</body>
+</html>
