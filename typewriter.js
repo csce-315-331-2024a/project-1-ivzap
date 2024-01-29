@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   async function typeText(preBlock, originalText, speed) {
     var chunkSize = originalText.length > 50 ? 10 : 1;
-
+    
     for (var index = 0; index < originalText.length; index += chunkSize) {
       var chunk = originalText.substring(index, index + chunkSize);
       preBlock.textContent += chunk;
@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   for (const preBlock of preBlocks) {
+    if (preBlock.id == "portfolioBoxGithub"){
+      preBlock.style.visibility = "visible";
+      continue;
+    }
     var originalText = preBlock.textContent;
     preBlock.textContent = ""; // Clear the original text
 
