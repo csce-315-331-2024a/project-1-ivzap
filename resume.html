@@ -1,76 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-                background-color: #2C001E; 
-                color: #FFFFFF; 
-                font-family: monospace; 
-                padding: 20px; 
-            }
-            @keyframes blink {
-                0% {
-                    opacity: 1;
-                }
-                50% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }   
+    <link rel="stylesheet" href="style1.css">
+    <script src="typewriter.js"></script>
 
-        a {
-            font-size: 15px;
-            color: #FFFFFF;
-            text-decoration: none; 
-            position: relative;
-            overflow: hidden;
-        }
-		
-		a:hover {
-            animation: blink 1s infinite; 
-        }
-
-        .cmd {
-            font-size: 15px;
-            color: #00FF00;
-            display: inline-block;
-            animation: blink 1s infinite; 
-        }
-    </style>
-    <style>
-        .terminal-text {
-            font-family: monospace;
-           
-            white-space: pre;
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var preBlocks = document.querySelectorAll('.terminal-text');
-
-            preBlocks.forEach(function(preBlock) {
-                var originalText = preBlock.textContent;
-                preBlock.textContent = ''; // Clear the original text
-                speed = 1
-                if (preBlock.tagName != "PRE"){
-                    speed = 70
-                }
-                for (var index = 0; index < originalText.length; index++) {
-                    (function (char, i) {
-                        setTimeout(function() {
-                            preBlock.textContent += char;
-                        }, i * speed); // Adjust the delay as needed
-                    })(originalText.charAt(index), index);
-                }
-            });
-        });
-    </script>
-    <div style="color: #FFFFFF; width: 100%; overflow: hidden; display: flex; flex-direction: row;">
-        <pre class="terminal-text" style="color: #FFFFFF;">
+    <div class="asciiBox">
+        <span class="fastType asciiLetters terminal-text">
 
         (                                 
         )\ )                              
@@ -80,11 +18,11 @@
         | _ \(_)) ((_)(_))(  _((_)) (_))   
         |   // -_)(_-<| || || '  \()/ -_)  
         |_|_\\___|/__/ \_,_||_|_|_| \___|  
+                                            
+        
 
-        </pre>
-
-
-        <pre class="terminal-text" style="color: #FFFFFF; font-size: 10px">
+        </span>
+        <span class="fastType asciiLetters dragon terminal-text">
 
             (  )   /\   _                 (     
              \ |  (  \ ( \.(               )                      _____
@@ -101,127 +39,122 @@
             '  (__/                                             /                  \
      
             
-     
-            </pre>
-
+        </span>
     </div>
-    <div style="display: flex; flex-direction: column">
-        <div style="display: flex; flex-direction: row">
-            <span style="font-size: 15px; color: #00FF00;">User@Website:</span>
-            <span class="terminal-text" style="font-size: 15px; color: #4444f0;">~/Home/Resume</span>
-            <span class="terminal-text" style="font-size: 15px; color: #ffffff;">$</span>
-            <span class="terminal-text" style="opacity: 0; color: #ffffff;">_</span>
-            <span class="cmd terminal-text" style="color: #ffffff;" class="cmd">_</span>
+    <div id="menuBox">
+        <div id="menuTerm">
+            <span id="menuTermUser">User@Website:</span>
+            <span id="menuTermPath" class="terminal-text">~/Home/Resume</span>
+            <span id="menuTermDollar" class="terminal-text">$</span>
+            <span id="menuTermBlinkHidden" class="terminal-text">_</span>
+            <span id="menuTermBlink" class="cmd terminal-text">_</span>
         </div>
-        <a class="terminal-text" href="index.html" style="font-size: 15px; color: #FFFFFF;">Home </a>
-        <a class="terminal-text" href="portfolio.html" style="font-size: 15px; color: #FFFFFF;">Portfolio </a>
-        <a class="terminal-text" href="resume.html" style="font-size: 15px; color: #FFFFFF;">Resume </a>
-        <a class="terminal-text" href="service.html" style="font-size: 15px; color: #FFFFFF;">Service </a>
-        <a class="terminal-text" href="AI.html" style="font-size: 15px; color: #FFFFFF;">AI </a>
+        <a class="menuOption terminal-text" href="index.html">Home </a>
+        <a class="menuOption terminal-text" href="portfolio.html">Portfolio</a>
+        <a class="menuOption terminal-text" href="resume.html">Resume </a>
+        <a class="menuOption terminal-text" href="service.html">Service </a>
+        <a class="menuOption terminal-text" href="AI.html">AI </a>
+    </div>
+
+    <h1 class="resumeText terminal-text">Resume</h1>
+    <span class="fastType resumeText terminal-text">
+        [EDUCATION]
+
+        Texas A&M University | GPA: 4.0 / 4.0 College Station, Texas
+        Bachelor of Science in Computer Engineering Expected Dec 2024
+        ● Relevant Coursework: CSCE 120, CSCE 222, CSCE 221, ECEN 214, ECEN 248, STATS 211,
+        MATH 251, MATH 308
+
+        [SKILLS]
+
+        Languages: C/C++, Python, ARMv8, Java, Rust, JavaScript, Verilog, BASH, HTML, CSS, SQL
+        Technologies: Git, Linux/Unix, LLVM, Clang, GCC, Cmake, Docker, React, Node.js
+
+        [EXPERIENCE]
+
+        Kershner Trading Group Austin, Texas
+        Software Engineer Intern June 2023 – Aug 2023
+        ● Developed and deployed a Python and C++ call graph tool for traders' scripts, leveraging the
+        Abstract Syntax Tree (AST) modules in both languages, and pushed into production using Docker
+        ● Call graph tool assisted in identifying circular dependencies and risky market orders within multiple
+        traders' scripts
+        ● Wrote documentation for the company's market simulator SDK, subsequently gaining familiarity
+        with CMake
+        ● Converted trader/quant Python scripts to C++ for low latency, which improved speeds by over 200%
+
+        DV Trading Austin, Texas
+        Software Engineer Intern May 2022 – Aug 2022
+        ● Developed the frontend and backend of stock algorithm optimization software using Electron.js
+        ● Reduced algorithm development time by 40% by generating C++ code with optimal parameters
+        ● Improved an algorithm by 60% via statistical techniques, resulting in a daily profit of +$10,000
+        ● Wrote, refactored, and documented over 10,000 lines of code in Python, Rust, and JavaScript
+
+        Kershner Trading Group Austin, Texas
+        Software Engineer Intern May 2021 – Aug 2021
+        ● Built frontend and backend of stock analysis software with Python, JavaScript, Node.js and C++
+        ● Utilized in-depth understanding of the company's tech stack and documentation
+        ● Automated an alert system to detect down servers, saving the IT department 7 hours weekly
+        ● Wrote and documented over 5,000 lines of code for various libraries and APIs in Python and C++
+
+        [PROJECTS & EXTRACURRICULARS]
+
+        Custom Programming SHELL
+        ● Wrote an entire programming shell that supports sign expansion and i/o redirection using IPC
+        ● Implemented using C/C++ in addition to unix system api calls such as fork, exec, and pipe
+        OpenJDK Systems Research (Texas A&M University)
+        ● Integrated marking of RDD objects into the OpenJDK G1 garbage collector source code using the
+        Java Native Interface (JNI) to enable caching of Spark RDDs
+        ● Required knowledge of G1 heap allocation(eden, survivor, old), object tracing, and marking phase
+
+    </span>
+    <div>
+        <a id="resumeLink terminal-text" href="Zaplatar.Ivan.pdf">
+            Download Resume
+        </a>
     </div>
     
-    
-
-   
-
-<h3 class="terminal-text">CONTACT</h3>
-
-<pre class="terminal-text">
-Ivan Zaplatar
-(512)-239-8224 | zaplatarivan@gmail.com | https://www.linkedin.com/in/ivan-zaplatar/ |
-https://github.com/ivzap
-</pre>
-
-<h3 class="terminal-text">EDUCATION</h3>
-
-<pre class="terminal-text">
-Texas A&M University | GPA: 4.0 / 4.0
-College Station, Texas
-Bachelor of Science in Computer Engineering
-Expected Dec 2024
-● Relevant Coursework: CSCE 120, CSCE 222, CSCE 221, ECEN 214, ECEN 248, STATS 211,
-MATH 251, MATH 308
-</pre>
-
-<h3 class="terminal-text">SKILLS</h3>
-
-<pre class="terminal-text">
-Languages: C/C++, Python, ARMv8, Java, Rust, JavaScript, Verilog, BASH, HTML, CSS, SQL
-Technologies: Git, Linux/Unix, LLVM, Clang, GCC, Cmake, Docker, React, Node.js
-</pre>
-
-<h3 class="terminal-text">EXPERIENCE</h3>
-
-<pre class="terminal-text">
-Kershner Trading Group
-Austin, Texas
-Software Engineer Intern
-June 2023 – Aug 2023
-● Developed and deployed a Python and C++ call graph tool for traders' scripts, leveraging the
-Abstract Syntax Tree (AST) modules in both languages, and pushed into production using Docker
-● Call graph tool assisted in identifying circular dependencies and risky market orders within multiple
-traders' scripts
-● Wrote documentation for the company's market simulator SDK, subsequently gaining familiarity
-with CMake
-● Converted trader/quant Python scripts to C++ for low latency, which improved speeds by over 200%
-
-DV Trading
-Austin, Texas
-Software Engineer Intern
-May 2022 – Aug 2022
-● Developed the frontend and backend of stock algorithm optimization software using Electron.js
-● Reduced algorithm development time by 40% by generating C++ code with optimal parameters
-● Improved an algorithm by 60% via statistical techniques, resulting in a daily profit of +$10,000
-● Wrote, refactored, and documented over 10,000 lines of code in Python, Rust, and JavaScript
-
-Kershner Trading Group
-Austin, Texas
-Software Engineer Intern
-May 2021 – Aug 2021
-● Built frontend and backend of stock analysis software with Python, JavaScript, Node.js and C++
-● Utilized in-depth understanding of the company's tech stack and documentation
-● Automated an alert system to detect down servers, saving the IT department 7 hours weekly
-● Wrote and documented over 5,000 lines of code for various libraries and APIs in Python and C++
-</pre>
-
-<h3 class="terminal-text">PROJECTS & EXTRACURRICULARS</h3>
-
-<pre class="terminal-text">
-Custom Programming SHELL
-● Wrote an entire programming shell that supports sign expansion and i/o redirection using IPC
-● Implemented using C/C++ in addition to unix system api calls such as fork, exec, and pipe
-
-OpenJDK Systems Research (Texas A&M University)
-● Integrated marking of RDD objects into the OpenJDK G1 garbage collector source code using the
-Java Native Interface (JNI) to enable caching of Spark RDDs
-● Required knowledge of G1 heap allocation(eden, survivor, old), object tracing, and marking phase
-
-</pre>
-
-    <a style="font-size: 15px; color: #4444f0;" href="Zaplatar.Ivan.pdf">Download Resume</a>
-    <div style="padding: 10px; display: flex; flex-direction: column; flex-grow: 1; flex-shrink: 1;">
-        <h1 class="terminal-text">Skills Description</h1>
-        <span class="">
-Specializing in systems programming, I bring a robust skill set that spans programming languages such as C/C++, Python, ARMv8, Java, Rust, JavaScript, Verilog, BASH, HTML, CSS, and SQL, coupled with expertise in technologies like Git, Linux/Unix, LLVM, Clang, GCC, CMake, Docker, React, and Node.js.
-As evidenced by my roles as a Software Engineer Intern, I have made significant contributions to low-level programming.
-Notably, within the xv6 operating system, I implemented custom system calls, including sysinfo and trace.
-The sysinfo system call provides valuable insights into system resources, displaying information such as available free memory and unused processes.
-Additionally, the trace system call allows for the monitoring of specific system calls, offering a detailed trace that is printed to stdout.
-These implementations showcase my proficiency in systems programming and my ability to work at a low level, contributing to the enhancement and customization of operating system functionality.
-My dedication to systems programming is further demonstrated by my involvement in projects that require a deep understanding of the intricacies of operating systems and the implementation of custom features.    
+    <div id="resumeContent">
+        <h1 class="resumeText terminal-text">Skills Description</h1>
+        <span class="fastType terminal-text resumeText">
+            Specializing in systems programming, I bring a robust skill set
+            that spans programming languages such as
+            C/C++, Python, ARMv8, Java, Rust, JavaScript, Verilog, BASH,
+            HTML, CSS, and SQL, coupled with expertise in
+            technologies like Git, Linux/Unix, LLVM, Clang, GCC, CMake,
+            Docker, React, and Node.js.
+            As evidenced by my roles as a Software Engineer Intern, I have
+            made significant contributions to low-level
+            programming.
+            Notably, within the xv6 operating system, I implemented custom
+            system calls, including sysinfo and trace.
+            The sysinfo system call provides valuable insights into system
+            resources, displaying information such as
+            available free memory and unused processes.
+            Additionally, the trace system call allows for the monitoring of
+            specific system calls, offering a detailed
+            trace that is printed to stdout.
+            These implementations showcase my proficiency in systems
+            programming and my ability to work at a low level,
+            contributing to the enhancement and customization of operating
+            system functionality.
+            My dedication to systems programming is further demonstrated by
+            my involvement in projects that require a
+            deep understanding of the intricacies of operating systems and
+            the implementation of custom features.
         </span>
 
-        <h1>Area of Interest</h1>
-        
-        <span>
-    This is a description of my area of interest.
+        <h1 class="terminal-text resumeText">Area of Interest</h1>
+
+        <span class="fastType terminal-text resumeText">
+            This is a description of my area of interest.
         </span>
-    </div>  
-    
+    </div>
+
 </head>
+
 <body>
 
-   
+
 </body>
+
 </html>
- 

@@ -1,85 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <style>
-        body {
-                background-color: #2C001E; 
-                color: #FFFFFF; 
-                font-family: monospace; 
-                padding: 20px;
-            }
-
-            @keyframes blink {
-                0% {
-                    opacity: 1;
-                }
-                50% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }
-
-        a {
-            font-size: 15px;
-            color: #FFFFFF;
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-        }
-		
-		a:hover {
-            animation: blink 1s infinite; /* 1s duration, infinite loop */
-        }
-
-        .cmd {
-            font-size: 15px;
-            color: #00FF00;
-            display: inline-block;
-            animation: blink 1s infinite; 
-        }
-
-        .blocks{
-            display: flex;
-            flex-direction: row; 
-
-        }
-
-    </style>
-    <style>
-        .terminal-text {
-            font-family: monospace;
-           
-            white-space: pre;
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var preBlocks = document.querySelectorAll('.terminal-text');
-
-            preBlocks.forEach(function(preBlock) {
-                var originalText = preBlock.textContent;
-                preBlock.textContent = ''; // Clear the original text
-                speed = 1
-                if (preBlock.tagName != "PRE"){
-                    speed = 70
-                }
-                for (var index = 0; index < originalText.length; index++) {
-                    (function (char, i) {
-                        setTimeout(function() {
-                            preBlock.textContent += char;
-                        }, i * speed); // Adjust the delay
-                    })(originalText.charAt(index), index);
-                }
-            });
-        });
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div style="color: #FFFFFF; width: 100%; overflow: hidden; display: flex; flex-direction: row;">
-        <pre class="terminal-text" style="color: #FFFFFF;">
-            
+    <link rel="stylesheet" href="style1.css">
+    <script src="typewriter.js"></script>
+
+    <div class="asciiBox">
+        <span class="fastType terminal-text">
+
         (                                   
         )\ )                                
         (()/(   (   (     )   (          (   
@@ -90,10 +20,10 @@
         |___/\___| |_|   \_/  |_|\__| \___|  
                                                     
    
-        </pre>
+        </span>
 
 
-        <pre class="terminal-text" style="color: #FFFFFF; font-size: 10px">
+        <span class="fastType dragon terminal-text">
 
             (  )   /\   _                 (     
              \ |  (  \ ( \.(               )                      _____
@@ -111,30 +41,29 @@
      
             
      
-            </pre>
+        </span>
 
     </div>
-    <div style="display: flex; flex-direction: column">
-        <div style="display: flex; flex-direction: row">
-            <span style="font-size: 15px; color: #00FF00;">User@Website:</span>
-            <span class="terminal-text" style="font-size: 15px; color: #4444f0;">~/Home/Service</span>
-            <span class="terminal-text" style="font-size: 15px; color: #ffffff;">$</span>
-            <span class="terminal-text"style="opacity: 0; color: #ffffff;">_</span>
-            <span class="cmd terminal-text" style="color: #ffffff;" class="cmd">_</span>
-        </div>
-        <a class="terminal-text" href="index.html" style="font-size: 15px; color: #FFFFFF;">Home </a>
-        <a class="terminal-text" href="portfolio.html" style="font-size: 15px; color: #FFFFFF;">Portfolio </a>
-        <a class="terminal-text" href="resume.html" style="font-size: 15px; color: #FFFFFF;">Resume </a>
-        <a class="terminal-text" href="service.html" style="font-size: 15px; color: #FFFFFF;">Service </a>
-        <a class="terminal-text" href="AI.html" style="font-size: 15px; color: #FFFFFF;">AI </a>
-    </div>
+    <div id="menuBox">
+		<div id="menuTerm">
+			<span id="menuTermUser">User@Website:</span>
+			<span id="menuTermPath" class="terminal-text">~/Home/Service</span>
+			<span id="menuTermDollar" class="terminal-text">$</span>
+			<span id="menuTermBlinkHidden" class="terminal-text">_</span>
+			<span id="menuTermBlink" class="cmd terminal-text">_</span>
+		</div>
+		<a class="menuOption terminal-text" href="index.html">Home </a>
+		<a class="menuOption terminal-text" href="portfolio.html">Portfolio </a>
+		<a class="menuOption terminal-text" href="resume.html">Resume </a>
+		<a class="menuOption terminal-text" href="service.html">Service </a>
+		<a class="menuOption terminal-text" href="AI.html">AI </a>
+	</div>
 
-    <div style="display: flex; flex-direction: row; flex-grow: 1; flex-shrink: 1;">
+    <div id="serviceBox">
         <!-- LEFT TO RIGHT  -->
-
-        <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
-            <h1>Highschool Waterpolo Team</h1>
-            <pre class="terminal-text">
+        <div class="serviceBoxElm">
+            <h1 class="resumeText terminal-text">Highschool Waterpolo Team</h1>
+            <span class="fastType terminal-text">
              _
             |.|
             ]^[
@@ -170,37 +99,58 @@ jgs       \ \, ~   -   ~
   -----------------------------
     -------------------------
 
-            </pre>
-        </div>
-
-        <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
-            <h1>Story</h1>
-            <span>
-                In the year 2020, during my senior year of high school, I found myself immersed in the world of club Waterpolo. For three years, I dedicated two hours a day, five times a week, to this exhilarating sport. However, a surprising realization hit me – my own high school lacked a Waterpolo team.
-                Undeterred, I teamed up with a friend and initiated a recruitment drive within the school. Much to our surprise, most recruits were swimmers. This stirred some resentment from the swim team coach, who wasn't thrilled about losing his swimmers to Waterpolo. Despite the initial setback, about 80% of our recruits had never played Waterpolo, posing a significant challenge.
-                Undaunted by the lack of experience, I took on the role of coach and swiftly began training the team. We delved into the rules of Waterpolo, devised strategies, and engaged in rigorous exercises. In just a month, our team had grown exponentially, forging strong bonds among members.
-                As the state championships loomed, official registration became imperative. This involved securing a sponsor and obtaining team caps. I enlisted my algebra teacher as our sponsor, but acquiring team caps proved to be a financial hurdle. To overcome this, we organized fundraisers at various marathons, providing aid to runners and collecting enough money to purchase the essential caps.
-                In the weeks leading up to the championship, we intensified our training, aiming to clinch the top spot. However, a week before the championship, I woke up to news about a new virus, COVID-19, affecting the other side of the world. Despite initial disbelief, the reality struck hard – everything, including school and sadly, the state championships, was shut down.
-                Regrettably, I wasn't able witnessing my team's performance in the following years State championships. It was heartening to see them back in action, participating in state competitions and, eventually, advancing to the finals. I couldn't be prouder of their accomplishments. They achieved it all through their own efforts. Well done, team! Go Knights!
             </span>
         </div>
 
-        
+        <div class="serviceBoxElm">
+            <h1 class="resumeText terminal-text">Story</h1>
+            <span class="fastType resumeText terminal-text">
+                In the year 2020, during my senior year of high school, I found myself immersed in the world of club
+                Waterpolo. For three years, I dedicated two hours a day, five times a week, to this exhilarating sport.
+                However, a surprising realization hit me – my own high school lacked a Waterpolo team.
+                Undeterred, I teamed up with a friend and initiated a recruitment drive within the school. Much to our
+                surprise, most recruits were swimmers. This stirred some resentment from the swim team coach, who wasn't
+                thrilled about losing his swimmers to Waterpolo. Despite the initial setback, about 80% of our recruits
+                had never played Waterpolo, posing a significant challenge.
+                Undaunted by the lack of experience, I took on the role of coach and swiftly began training the team. We
+                delved into the rules of Waterpolo, devised strategies, and engaged in rigorous exercises. In just a
+                month, our team had grown exponentially, forging strong bonds among members.
+                As the state championships loomed, official registration became imperative. This involved securing a
+                sponsor and obtaining team caps. I enlisted my algebra teacher as our sponsor, but acquiring team caps
+                proved to be a financial hurdle. To overcome this, we organized fundraisers at various marathons,
+                providing aid to runners and collecting enough money to purchase the essential caps.
+                In the weeks leading up to the championship, we intensified our training, aiming to clinch the top spot.
+                However, a week before the championship, I woke up to news about a new virus, COVID-19, affecting the
+                other side of the world. Despite initial disbelief, the reality struck hard – everything, including
+                school and sadly, the state championships, was shut down.
+                Regrettably, I wasn't able witnessing my team's performance in the following years State championships.
+                It was heartening to see them back in action, participating in state competitions and, eventually,
+                advancing to the finals. I couldn't be prouder of their accomplishments. They achieved it all through
+                their own efforts. Well done, team! Go Knights!
+            </span>
+    </div>
+
+
 
     </div>
 
 
-    <div style="display: flex; flex-direction: row; flex-grow: 1; flex-shrink: 1; flex-direction: column;">
-        <h1>Future Service Contribution</h1>
-        <span>
-            Beyond my involvement in water polo, I aspire to make a meaningful impact on the world by actively participating in open-source projects related to Linux, including, but not restricted to, the Linux Kernel, FreeBSD, and Ubuntu Touch. These projects play a crucial role in numerous services benefiting society, such as medical systems, cybersecurity, and research, affecting the lives of millions.
+    <div id="serviceElmFuture">
+        <h1 class="resumeText terminal-text">Future Service Contribution</h1>
+        <span class="fastType resumeText terminal-text">
+            Beyond my involvement in water polo, I aspire to make a meaningful impact on the world by actively
+            participating in open-source projects related to Linux, including, but not restricted to, the Linux Kernel,
+            FreeBSD, and Ubuntu Touch. These projects play a crucial role in numerous services benefiting society, such
+            as medical systems, cybersecurity, and research, affecting the lives of millions.
         </span>
     </div>
 
 
     </div>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

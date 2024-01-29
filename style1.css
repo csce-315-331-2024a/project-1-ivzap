@@ -1,0 +1,187 @@
+body {
+    background-color: #2C001E; 
+    color: #FFFFFF; 
+    font-family: monospace; 
+    padding: 20px; 
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+a {
+font-size: 15px;
+color: #FFFFFF;
+text-decoration: none; 
+position: relative;
+overflow: hidden;
+visibility: hidden;
+}
+
+a:hover {
+animation: blink 1s infinite; 
+}
+
+.cmd {
+    font-size: 15px;
+    color: #00FF00;
+    display: inline-block;
+    animation: blink 1s infinite; 
+}
+
+.terminal-text {
+    font-family: monospace;
+    white-space: pre;
+    visibility: hidden;
+}
+
+/* Webpage ASCII art START */
+.asciiBox{
+    color: #FFFFFF; 
+    width: 100%; 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: row;
+}
+
+.dragon{
+    color: #FFFFFF; 
+    font-size: 10px
+}
+
+.asciiLetters{
+    color: #FFFFFF;
+}
+
+/* Webpage ASCII art END */
+
+
+/* Webpage Menu START*/
+#menuBox{
+    display: flex;
+    flex-direction: column
+}
+
+#menuTerm{
+    display: flex;
+    flex-direction: row
+}
+
+#menuTermUser{
+    font-size: 15px;
+    color: #00FF00;
+
+}
+
+#menuTermPath{
+    font-size: 15px;
+    color: #4444f0;
+}
+
+#menuTermDollar{
+    font-size: 15px;
+    color: #ffffff;
+}
+
+#menuTermBlinkHidden{
+    opacity: 0;
+    color: #ffffff;
+}
+
+#menuTermBlink{
+    color: #ffffff;
+}
+
+.menuOption{
+    font-size: 15px;
+    color: #FFFFFF;
+}
+/* Webpage Menu END*/
+
+/* Webpage Portfolio START */
+#portfolioBox{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#portfolioBoxGithub{
+    padding: 20px
+}
+
+.portfolioBoxProj{
+    padding: 10px;
+    flex-direction: column;
+}
+.portfolioBoxProjContent{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.portfolioBoxProjContentElm{
+    width: 50%; 
+    flex-grow: 1; 
+    flex-shrink: 1;
+}
+
+.portfolioBoxProjContentLink{
+    color: #4444f0;
+}
+
+/* Webpage Portfolio END */
+
+/* Webpage Resume START */
+#resumeLink{
+    font-size: 15px; 
+    color: #4444f0;
+}
+
+#resumeContent{
+    padding: 10px; 
+    display: flex; 
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.resumeText{
+    white-space: pre-line;
+}
+/* Webpage Resume END */
+
+/* Webpage Service START */
+
+#serviceBox{
+    display: flex; 
+    flex-direction: row; 
+    flex-grow: 1; 
+    flex-shrink: 1;
+}
+
+.serviceBoxElm{
+    width: 50%; 
+    flex-grow: 1; 
+    flex-shrink: 1;    
+}
+
+#serviceElmFuture{
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1; 
+    flex-shrink: 1;
+}
+
+/* Webpage Service END */
+
+
+

@@ -1,79 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <style>
-        body {
-                background-color: #2C001E; 
-                color: #FFFFFF; 
-                font-family: monospace; 
-                padding: 20px; 
-            }
-
-            @keyframes blink {
-                0% {
-                    opacity: 1;
-                }
-                50% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }
-
-        a {
-            font-size: 15px;
-            color: #FFFFFF;
-            text-decoration: none; 
-            position: relative;
-            overflow: hidden;
-        }
-		
-		a:hover {
-            animation: blink 1s infinite; 
-        }
-
-        .cmd {
-            font-size: 15px;
-            color: #00FF00;
-            display: inline-block;
-            animation: blink 1s infinite; 
-        }
-
-    </style>
-    <style>
-        .terminal-text {
-            font-family: monospace;
-           
-            white-space: pre;
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var preBlocks = document.querySelectorAll('.terminal-text');
-
-            preBlocks.forEach(function(preBlock) {
-                var originalText = preBlock.textContent;
-                preBlock.textContent = ''; // Clear the original text
-                speed = 1
-                if (preBlock.tagName != "PRE"){
-                    speed = 70
-                }
-                for (var index = 0; index < originalText.length; index++) {
-                    (function (char, i) {
-                        setTimeout(function() {
-                            preBlock.textContent += char;
-                        }, i * speed); // Adjust the delay as needed
-                    })(originalText.charAt(index), index);
-                }
-            });
-        });
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div style="color: #FFFFFF; width: 100%; overflow: hidden; display: flex; flex-direction: row;">
-        <pre class="terminal-text" style="color: #FFFFFF;">
-            
+    <link rel="stylesheet" href="style1.css">
+    <script src="typewriter.js"></script>
+   
+    <div class="asciiBox">
+        <span class="fastType asciiLetters terminal-text">
+
         (                                           
         )\ )              )  (          (           
         (()/(      (    ( /(  )\ )       )\ (        
@@ -84,10 +20,9 @@
         |_|  \___/|_|   \__|  |_|  \___/|_| |_|\___/ 
                                                     
    
-        </pre>
+        </span>
 
-
-        <pre class="terminal-text" style="color: #FFFFFF; font-size: 10px">
+        <span class="fastType dragon terminal-text">
 
             (  )   /\   _                 (     
              \ |  (  \ ( \.(               )                      _____
@@ -105,36 +40,36 @@
      
             
      
-            </pre>
+        </span>
 
     </div>
-    <div style="display: flex; flex-direction: column">
-        <div style="display: flex; flex-direction: row">
-            <span style="font-size: 15px; color: #00FF00;">User@Website:</span>
-            <span class="terminal-text" style="font-size: 15px; color: #4444f0;">~/Home/Portfolio</span>
-            <span class="terminal-text" style="font-size: 15px; color: #ffffff;">$</span>
-            <span class="terminal-text"style="opacity: 0; color: #ffffff;">_</span>
-            <span class="cmd terminal-text" style="color: #ffffff;" class="cmd">_</span>
+    <div id="menuBox">
+        <div id="menuTerm">
+            <span id="menuTermUser">User@Website:</span>
+            <span id="menuTermPath" class="dir terminal-text">~/Home/Portfolio</span>
+            <span id="menuTermDollar" class="terminal-text">$</span>
+            <span id="menuTermBlinkHidden">_</span>
+            <span id="menuTermBlink" class="cmd terminal-text">_</span>
         </div>
-        <a class="terminal-text" href="index.html" style="font-size: 15px; color: #FFFFFF;">Home </a>
-        <a class="terminal-text" href="portfolio.html" style="font-size: 15px; color: #FFFFFF;">Portfolio </a>
-        <a class="terminal-text" href="resume.html" style="font-size: 15px; color: #FFFFFF;">Resume </a>
-        <a class="terminal-text" href="service.html" style="font-size: 15px; color: #FFFFFF;">Service </a>
-        <a class="terminal-text" href="AI.html" style="font-size: 15px; color: #FFFFFF;">AI </a>
+        <a class="menuOption terminal-text" href="index.html">Home </a>
+        <a class="menuOption terminal-text" href="portfolio.html">Portfolio </a>
+        <a class="menuOption terminal-text" href="resume.html">Resume </a>
+        <a class="menuOption terminal-text" href="service.html">Service </a>
+        <a class="menuOption terminal-text" href="AI.html">AI </a>
     </div>
 
-    <div style="display: flex; flex-direction: column; flex-grow: 1; flex-shrink: 1;">
-        <a href="https://github.com/ivzap" style="padding: 20px">
+    <div class="portfolioBoxProj">
+        <a id="portfolioBoxGithub" href="https://github.com/ivzap">
             <img src="github-desktop.svg" alt="GitHub Logo" width="75" height="75">
         </a>
-    <div style="padding: 10px; flex-direction: column;">
 
-    <div style="display: flex; flex-direction: row; flex-grow: 1; flex-shrink: 1;">
-        <!-- LEFT TO RIGHT  -->
+        <div id="portfolioBox1">
 
-        <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
-            <h1>C-threaded Database</h1>
-            <pre class="terminal-text">
+            <div class="portfolioBoxProjContent">
+                <!-- LEFT TO RIGHT  -->
+                <div class="portfolioBoxProjContentElm">
+                    <h1 class="resumeText terminal-text">C-threaded Database</h1>
+                    <span class="fastType terminal-text">
 Server                                Client
 +-------+                             +-------+
 |       |                             |       |
@@ -162,29 +97,34 @@ Server                                Client
 |                                      |
               
               
-            </pre>
-        </div>
-
-        <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
-            <h1>Description</h1>
-            <span style="flex-grow: 1; flex-shrink: 1;">
-                A straightforward database system with server and client components written in C/C++. Utilizes raw sockets and the TCP protocol to transfer files to clients or server in small, byte-sized segments. Facilitates both uploading and downloading functionalities. Client is implemented in Python to improve abstraction.            
-                <a href="https://github.com/ivzap/c-threaded-database" style="color: #4444f0;"> Checkout this repo on Github!</a>
             </span>
+                </div>
+
+                <div class="portfolioBoxProjContentElm">
+                    <h1 class="resumeText terminal-text">Description</h1>
+                    <span class="resumeText fastType terminal-text">
+                        A straightforward database system with server and client components written in C/C++. Utilizes
+                        raw sockets and the TCP protocol to transfer files to clients or server in small, byte-sized
+                        segments. Facilitates both uploading and downloading functionalities. Client is implemented in
+                        Python to improve abstraction.
+                        
+                    </span>
+                    <a class="terminal-text resumeText portfolioBoxProjContentLink" href="https://github.com/ivzap/c-threaded-database"> Checkout this
+                        repo on Github!</a>
+                </div>
+            </div>
+
         </div>
-    </div>
 
-    </div>
+        <!-- Second Project -->
+        <div class="portfolioBoxProj">
 
-    <!-- Second Project -->
-    <div style="padding: 10px; flex-direction: column;">
+            <div class="portfolioBoxProjContent">
+                <!-- LEFT TO RIGHT  -->
 
-        <div style="display: flex; flex-direction: row; flex-grow: 1; flex-shrink: 1;">
-            <!-- LEFT TO RIGHT  -->
-    
-            <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
-                <h1>Bounded Buffer</h1>
-                <pre class="terminal-text">
+                <div class="portfolioBoxProjContentElm">
+                    <h1 class="resumeText terminal-text">Bounded Buffer</h1>
+                    <span class="fastType terminal-text">
 +-----------------------------+
 |        Shared Buffer        |
 +-----------------------------+
@@ -197,27 +137,29 @@ Front   Worker   Worker
 [ Producer ] [ Consumer ]
 [  Thread  ] [  Thread  ]
                 </pre>
+                </div>
+
+                <div class="portfolioBoxProjContentElm">
+                    <h1 class="terminal-text">Description</h1>
+                    <span class="fastType resumeText terminal-text">
+                        Simulating a PAC (Producer And Consumer) scenario, this exercise demonstrates the implementation
+                        of my C/C++ application with thread-safe features.
+                       
+                    </span>
+                    <a class="terminal-text resumeText portfolioBoxProjContentLink" href="https://github.com/ivzap/posix-threading-pac"> Checkout this
+                        repo on Github!</a>
+                </div>
             </div>
-    
-            <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
-                <h1>Description</h1>
-                <span>
-                    Simulating a PAC (Producer And Consumer) scenario, this exercise demonstrates the implementation of my C/C++ application with thread-safe features.
-                    <a href="https://github.com/ivzap/posix-threading-pac" style="color: #4444f0;"> Checkout this repo on Github!</a>
-                </span>
-            </div>
+
         </div>
+        <!-- Third Project -->
+        <div class="portfolioBoxProj">
 
-    </div>
-    <!-- Third Project -->
-    <div style="padding: 10px; flex-direction: column;">
-
-        <div style="display: flex; flex-direction: row; flex-grow: 1; flex-shrink: 1;">
-            <!-- LEFT TO RIGHT  -->
-    
-            <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
-                <h1>Programming SHELL</h1>
-                <pre class="terminal-text">
+            <div class="portfolioBoxProjContent">
+                <!-- LEFT TO RIGHT  -->
+                <div class="portfolioBoxProjContentElm">
+                    <h1 class="terminal-text">Programming SHELL</h1>
+                    <span class="terminal-text">
 ___________________
 | _______________ |
 | |CMD:~$XXXXXXX| |
@@ -233,29 +175,31 @@ ___[___________]___
 L___________________J     \ \___\/
 ___________________      /\
 /###################\    (__)
-                </pre>
+                    </span>
+                </div>
+
+                <div class="portfolioBoxProjContentElm">
+                    <h1 class="terminal-text">Description</h1>
+                    <span class="fastType resumeText terminal-text">
+                        A personalized C/C++ programming shell featuring input/output redirection and wildcard
+                        expansion.
+                    </span>
+                    <a class="terminal-text resumeText portfolioBoxProjContentLink" href="https://github.com/ivzap/shell">
+                        Checkout this repo on Github!
+                    </a>
+                </div>
             </div>
-    
-            <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
-                <h1>Description</h1>
-                <span>
-                    A personalized C/C++ programming shell featuring input/output redirection and wildcard expansion. 
-                    <a href="https://github.com/ivzap/shell" style="color: #4444f0;"> Checkout this repo on Github!</a>
-                </span>
-            </div>
+
         </div>
 
-    </div>
+        <!-- Fourth Project -->
+        <div class="portfolioBoxProj">
 
-    <!-- Fourth Project -->
-    <div style="padding: 10px; flex-direction: column;">
-
-        <div style="display: flex; flex-direction: row; flex-grow: 1; flex-shrink: 1;">
-            <!-- LEFT TO RIGHT  -->
-    
-            <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
-                <h1>ARMv8 Single Cycle Processor Simulation</h1>
-                <pre class="terminal-text">
+            <div class="portfolioBoxProjContent">
+                <!-- LEFT TO RIGHT  -->
+                <div class="portfolioBoxProjContentElm">
+                    <h1 class="resumeText terminal-text">ARMv8 Single Cycle Processor Simulation</h1>
+                    <span class="terminal-text">
     ___________________
     |                  |
   ##|                  |##
@@ -267,29 +211,35 @@ ___________________      /\
     |__________________|
        ##          ##
 
-                </pre>
+                    </span>
+                </div>
+
+                <div class="portfolioBoxProjContentElm">
+                    <h1 class="resumeText terminal-text">Description</h1>
+                    <span class="resumeText terminal-text">
+                        Armv8 single cycle processor supporting instructions such as: LDUR, STUR, ADD, SUB, AND, OR,
+                        MOVZ.
+                        
+                    </span>
+                    <a class="terminal-text resumeText portfolioBoxProjContentLink" href="https://github.com/ivzap/shell">
+                        Checkout this repo on Github!
+                    </a>
+                </div>
             </div>
-    
-            <div style="width: 50%; flex-grow: 1; flex-shrink: 1;">
-                <h1>Description</h1>
-                <span>
-                    Armv8 single cycle processor supporting instructions such as: LDUR, STUR, ADD, SUB, AND, OR, MOVZ. 
-                    <a href="https://github.com/ivzap/shell" style="color: #4444f0;"> Checkout this repo on Github!</a>
-                </span>
-            </div>
+
         </div>
 
-    </div>
 
-   
-      
-    
+
+
     </div>
 
 
     </div>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
