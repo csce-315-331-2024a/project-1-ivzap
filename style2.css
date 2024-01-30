@@ -1,0 +1,48 @@
+body {
+    background-color: #00008b; 
+    color: #FFFFFF; 
+    font-family: "Courier New"; 
+    padding: 20px; 
+}
+
+#cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1em;
+    background-color: white;
+    animation: blink 0.5s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+a {
+    color: #FFFFFF;
+    text-decoration: none; 
+    position: relative;
+    overflow: hidden;
+    visibility: visible;
+}
+
+a:hover {
+    animation: blink 0.5s infinite; 
+}
+
+.menuBox{
+    display: flex;
+}
+#menuTerm{
+    flex-direction: row;
+}
+.menuOption{
+    flex-direction: row;
+}
+
+
+
