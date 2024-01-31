@@ -5,6 +5,18 @@ body {
     padding: 20px; 
 }
 
+.wrapper{
+    display: none;
+}
+
+#styleBox{
+    display: none;
+}
+
+#bubbleMenuBox{
+    display: none;
+}
+
 @keyframes blink {
     0% {
         opacity: 1;
@@ -54,7 +66,8 @@ animation: blink 1s infinite;
 
 .dragon{
     color: #FFFFFF; 
-    font-size: 10px
+    font-size: 10px;
+    display: block;
 }
 
 .asciiLetters{
@@ -67,12 +80,13 @@ animation: blink 1s infinite;
 /* Webpage Menu START*/
 #menuBox{
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 #menuTerm{
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    display: visible;
 }
 
 #menuTermUser{
@@ -182,6 +196,7 @@ animation: blink 1s infinite;
 }
 
 /* Webpage Service END */
+
 
 
 

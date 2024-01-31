@@ -4,8 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style1.css">
+	<script src="switch.js"></script>
 	<script src="typewriter.js"></script>
+	<link id="mainStyleSheet" rel="stylesheet" href="style1.css">
 
 	<div class="asciiBox">
 		<span  class="fastType terminal-text">
@@ -51,6 +52,9 @@
 			<span id="menuTermDollar" class="terminal-text">$</span>
 			<span id="menuTermBlinkHidden" class="terminal-text">_</span>
 			<span id="menuTermBlink" class="cmd terminal-text">_</span>
+			<div id="styleBox">
+                <button onclick="toggleStyleSheet()">Change Style</button>
+            </div>
 		</div>
 		<a class="menuOption terminal-text" href="index.html">Home </a>
 		<a class="menuOption terminal-text" href="portfolio.html">Portfolio </a>
@@ -63,6 +67,38 @@
 </head>
 
 <body>
+	<div class="wrapper">
+		<h1>I'm Ivan Zaplatar</h1>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+	  </div>
+  
+	  <div id="bubbleStyleBox">
+		<button onclick="toggleStyleSheet()">Change Style</button>
+	  </div>
+	  <div id="bubbleMenuBox">
+		
+		<div id="menuButtons">
+		  <a href="index.html"> Home </a>
+		  <a href="portfolio.html"> Portfolio </a>
+		  <a href="resume.html"> Resume </a>
+		  <a href="service.html"> Service </a>
+		  <a href="AI.html"> AI </a>
+		</div>
+	  </div>
 
 
 </body>

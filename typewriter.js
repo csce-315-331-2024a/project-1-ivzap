@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   for (const preBlock of preBlocks) {
+    curStyleSheet = localStorage.getItem("savedStyleName");
+    if(curStyleSheet == "style2.css"){
+      break;
+    }
     if (preBlock.id == "portfolioBoxGithub"){
       preBlock.style.visibility = "visible";
       continue;

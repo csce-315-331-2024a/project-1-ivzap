@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+    <link id="mainStyleSheet" rel="stylesheet" href="style1.css">
+    <script src="switch.js"></script>
     <script src="typewriter.js"></script>
-   
     <div class="asciiBox">
         <span class="fastType asciiLetters terminal-text">
 
@@ -232,9 +232,6 @@ ___________________      /\
 
         </div>
 
-
-
-
     </div>
 
 
@@ -242,6 +239,84 @@ ___________________      /\
 </head>
 
 <body>
+    <div class="wrapper">
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+		<div><span class="dot"></span></div>
+	  </div>
+    
+    
+    <div id="bubbleContainer">
+        <div style="z-index: 13;" id="bubbleMenu">
+            <div id="bubbleStyleBox">
+                <button onclick="toggleStyleSheet()">Change Style</button>
+            </div>
+            <div id="bubbleMenuBox">
+                <div id="menuButtons">
+                <a href="index.html"> Home </a>
+                <a href="portfolio.html"> Portfolio </a>
+                <a href="resume.html"> Resume </a>
+                <a href="service.html"> Service </a>
+                <a href="AI.html"> AI </a>
+                </div>
+            </div>
+        </div>
+        <div id="bubbleProjects">
+            <div id="bubbleProject1">
+                <h1>C++ Server and Python Client File Transfering</h1>
+                <div>
+                    <img src="client-server.png" width="300" height="300">
+                </div>
+                <div>
+                    <span id="bubbleProjectDesc1">
+                        A straightforward database system with server and client components written in C/C++. Utilizes
+                        raw sockets and the TCP protocol to transfer files to clients or server in small, byte-sized
+                        segments. Facilitates both uploading and downloading functionalities. Client is implemented in
+                        Python to improve abstraction.
+                    </span>
+                </div>
+                
+            </div>
+
+            <div id="bubbleProject2">
+                <h1>Bounded Buffer</h1>
+                <div>
+                    <img src="prodcons.png" width="1250" height="300">
+                </div>
+                <div>
+                    <span id="bubbleProjectDesc2">
+                        Simulating a PAC (Producer And Consumer) scenario, this exercise demonstrates the implementation
+                        of my C/C++ application with thread-safe features.
+                    </span>
+                </div>
+                
+            </div>
+
+            
+            
+        </div>
+
+    </div>
+
+    
+    
+
+      
+      
+
+
 
 </body>
 
