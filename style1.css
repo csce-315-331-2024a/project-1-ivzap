@@ -43,6 +43,10 @@ body {
     display: none;
   }
 
+#bubblesServiceBox{
+    display: none;
+}
+
 
 #bubbleStyleBox{
     display: none;

@@ -2,7 +2,6 @@
 
 function toggleStyleSheet(){
     // Task 1
-    // Steps
     // 1 (a) Get style element by ID (hint: getElementById)
 
     var elm = document.getElementById("mainStyleSheet")
@@ -13,16 +12,6 @@ function toggleStyleSheet(){
     }else{
         elm.setAttribute("href", "style1.css");
     }
-    
-   
-    // 1 (c) Determine new stylesheet file name
-
-    // 1 (d) replace stylesheet with new stylesheet (hint: element.setAttribute)
-
-
-    // TASK 2
-    // 2 (d) For persistence when page is refreshed. save new stylesheet name to localStorage
-    // hint: localStorage.setItem(name, value)
     localStorage.setItem("savedStyleName", elm.href)
     return false;
 }
@@ -43,7 +32,6 @@ window.onload = function(){
     elm = document.getElementById("mainStyleSheet");
 
     // 2 (c) replace href attribute of html element.
-    //elm.href = savedSheetName;
     elm.setAttribute("href", savedSheetName)
     console.log(elm.href);
 }

@@ -1,82 +1,99 @@
-body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0px;
-    font-family: sans-serif;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 888;
-    background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #030423);
-    background-attachment: fixed;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 888;
+  background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #030423);
+  background-attachment: fixed;
+}
 
-  }
-
-
-#menuBox{
+#menuBox {
   display: none;
 }
 
-#menuButtons{
+#bubbleServiceFuture{
+  white-space: pre-line;
+  font-weight: 10;
+}
+
+#menuButtons {
   display: flex;
   position: relative;
   width: 1000px;
-  height: 50px;;
-  background: rgba(255,255,255,.1);
-  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
-  border: 2px solid rgba(255,255,255,.5);
-  border-right: 2px solid rgba(255,255,255,.2);
-  border-bottom: 2px solid rgba(255,255,255,.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   align-items: center;
   justify-content: space-between;
 }
 
+#bubbleServiceBox{
+  text-shadow: 0px 50px 10px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
+  display: flex;
+  margin-top: 200px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
 
-
-#bubbleStyleBox{
+#bubbleStyleBox {
   position: relative;
   right: 0;
   z-index: 13;
 }
 
-.s{
-  position:absolute;
+.s {
+  position: absolute;
 }
 
-.asciiBox{
+.asciiBox {
   display: none;
 }
 
-.dragon{
-  color: #FFFFFF; 
+.dragon {
+  color: #ffffff;
   font-size: 10px;
   display: none;
 }
 
-#bubbleContainer{
+#bubbleContainer {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-#bubblePageBox{
+#bubblePageBox {
   display: flex;
   position: relative;
 }
 
-#bubbleMenu{
-  
+#bubbleMenu {
   display: flex;
 }
 
 /* Container styling */
 #bubbleMenuBox {
-  
   display: flex;
   justify-content: space-around; /* Evenly distribute items */
   padding: 10px;
@@ -85,44 +102,41 @@ body, html {
   width: 100%;
 }
 
-.portfolioBoxProj{
+.portfolioBoxProj {
   display: none;
 }
 
-#resumeContent{
+#resumeContent {
   display: none;
 }
 
-#resumeLink{
+#resumeLink {
   display: none;
 }
 
-.fastType{
+.fastType {
   display: none;
 }
 
-.terminal-text{
+.terminal-text {
   display: none;
 }
 
-#bubblePortfolioBox{
+#bubblePortfolioBox {
   position: relative;
 }
-
-
-
 
 /* Link styling */
 #menuButtons a {
   width: 100%;
-  background: rgba(255,255,255,.1);
+  background: rgba(255, 255, 255, 0.1);
   text-shadow: -5px 20px 9px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
 
   border-radius: 5px;
-  border-right: 2px solid rgba(255,255,255,.2);
-  border-bottom: 2px solid rgba(255,255,255,.2);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  
+
   text-align: center;
   padding: 3px 5px;
   color: rgb(255, 255, 255); /* White text color */
@@ -132,12 +146,11 @@ body, html {
   transition: all 0.4s ease; /* Smooth transition for size change */
   margin-right: 30px;
   margin-left: 30px;
-
 }
 
 /* Change background color on hover */
 #menuButtons a:hover {
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   transform: scale(1.1); /* Grow the button slightly */
 }
 
@@ -152,30 +165,12 @@ body, html {
   align-self: flex-start;
 }
 
-.bubbleProjects{
-  
+.bubbleProjects {
   display: flex;
   flex-direction: column;
 }
 
-
-#bubbleProject1{
-  display: none;
-}
-
-#bubbleProject2{
-  display: none;
-}
-
-#bubbleProject3{
-  display: none;
-}
-
-#bubbleProject4{
-  display: none;
-}
-
-#bubbleProject1{
+#bubbleProject1 {
   text-shadow: 0px 50px 10px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
   display: flex;
   margin-top: 200px;
@@ -183,23 +178,31 @@ body, html {
   margin-right: 10%;
   text-align: center;
   flex-direction: column;
-  background: rgba(255,255,255,.1);
-  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
-  border: 2px solid rgba(255,255,255,.5);
-  border-right: 2px solid rgba(255,255,255,.2);
-  border-bottom: 2px solid rgba(255,255,255,.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
 }
 
+#bubblesServiceBox {
+  display: flex;
+  flex-direction: column;
+}
 
-#bubbleProjectDesc1{
+#bubbleProjectDesc1 {
   white-space: pre-line;
-
   font-weight: 10;
 }
 
-#bubbleProject2{
+#bubbleServiceDesc {
+  white-space: pre-line;
+  font-weight: 10;
+}
+
+#bubbleProject2 {
   text-shadow: 0px 100px 15px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
 
   display: flex;
@@ -208,24 +211,20 @@ body, html {
   margin-right: 10%;
   text-align: center;
   flex-direction: column;
-  background: rgba(255,255,255,.1);
-  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
-  border: 2px solid rgba(255,255,255,.5);
-  border-right: 2px solid rgba(255,255,255,.2);
-  border-bottom: 2px solid rgba(255,255,255,.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-
-
 }
-#bubbleProjectDesc2{
+#bubbleProjectDesc2 {
   white-space: pre-line;
   font-weight: 10;
 }
 
-
-
-#bubbleProject3{
+#bubbleProject3 {
   text-shadow: 0px 150px 30px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
 
   display: flex;
@@ -234,22 +233,20 @@ body, html {
   margin-right: 10%;
   text-align: center;
   flex-direction: column;
-  background: rgba(255,255,255,.1);
-  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
-  border: 2px solid rgba(255,255,255,.5);
-  border-right: 2px solid rgba(255,255,255,.2);
-  border-bottom: 2px solid rgba(255,255,255,.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-
-
 }
-#bubbleProjectDesc3{
+#bubbleProjectDesc3 {
   white-space: pre-line;
   font-weight: 10;
 }
 
-#bubbleProject4{
+#bubbleProject4 {
   text-shadow: 0px 150px 30px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
 
   display: flex;
@@ -258,31 +255,30 @@ body, html {
   margin-right: 10%;
   text-align: center;
   flex-direction: column;
-  background: rgba(255,255,255,.1);
-  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
-  border: 2px solid rgba(255,255,255,.5);
-  border-right: 2px solid rgba(255,255,255,.2);
-  border-bottom: 2px solid rgba(255,255,255,.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
 }
 
-#bubbleProjectDesc4{
+#bubbleProjectDesc4 {
   white-space: pre-line;
   font-weight: 10;
 }
 
-.bubbleGithub{
+.bubbleGithub {
   transition: all 0.4s ease; /* Smooth transition for size change */
   align-self: center;
 }
 
-.bubbleGithub:hover{
-  
+.bubbleGithub:hover {
   transform: scale(1.1);
 }
 
-#bubbleResumeDesc{
+#bubbleResumeDesc {
   text-shadow: 0px 150px 30px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
   white-space: pre-line;
   font-weight: 10;
@@ -292,23 +288,23 @@ body, html {
   margin-right: 10%;
   text-align: center;
   flex-direction: column;
-  background: rgba(255,255,255,.1);
-  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
-  border: 2px solid rgba(255,255,255,.5);
-  border-right: 2px solid rgba(255,255,255,.2);
-  border-bottom: 2px solid rgba(255,255,255,.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
 }
 
-#resumeImage{
+#resumeImage {
   align-self: center;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
 
-#bubbleResumeBox{
+#bubbleResumeBox {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -429,13 +425,11 @@ body, html {
     transform: scale(1.3) translateY(-100px) rotate(360deg);
   }
 }
-.resumeText{
+.resumeText {
   display: none;
 }
 
-#bubble
-
-.bubbleProjectDesc{
+#bubble .bubbleProjectDesc {
   white-space: pre;
   font-size: 10px;
   letter-spacing: 0px;

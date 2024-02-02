@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   async function typeText(preBlock, originalText, speed) {
     var chunkSize = originalText.length > 50 ? 10 : 1;
-    
+
     for (var index = 0; index < originalText.length; index += chunkSize) {
       var chunk = originalText.substring(index, index + chunkSize);
       preBlock.textContent += chunk;
@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   for (const preBlock of preBlocks) {
     curStyleSheet = localStorage.getItem("savedStyleName");
-    if(curStyleSheet == "style2.css"){
+    if (curStyleSheet == "style2.css") {
       break;
     }
-    if (preBlock.id == "portfolioBoxGithub"){
+    if (preBlock.id == "portfolioBoxGithub") {
       preBlock.style.visibility = "visible";
       continue;
     }
