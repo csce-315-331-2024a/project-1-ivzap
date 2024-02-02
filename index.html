@@ -4,9 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link id="mainStyleSheet" rel="stylesheet" href="style1.css">
 	<script src="switch.js"></script>
 	<script src="typewriter.js"></script>
-	<link id="mainStyleSheet" rel="stylesheet" href="style1.css">
 
 	<div class="asciiBox">
 		<span  class="fastType terminal-text">
@@ -85,20 +85,23 @@
 		<div><span class="dot"></span></div>
 		<div><span class="dot"></span></div>
 	  </div>
-  
-	  <div id="bubbleStyleBox">
-		<button onclick="toggleStyleSheet()">Change Style</button>
-	  </div>
-	  <div id="bubbleMenuBox">
-		
-		<div id="menuButtons">
-		  <a href="index.html"> Home </a>
-		  <a href="portfolio.html"> Portfolio </a>
-		  <a href="resume.html"> Resume </a>
-		  <a href="service.html"> Service </a>
-		  <a href="AI.html"> AI </a>
-		</div>
-	  </div>
+	  
+	  <div id="bubbleContainer">
+        <div style="z-index: 13;" id="bubbleMenu">
+            <div id="bubbleStyleBox">
+                <button onclick="toggleStyleSheet()">Change Style</button>
+            </div>
+            <div id="bubbleMenuBox">
+                <div id="menuButtons">
+                <a href="index.html"> Home </a>
+                <a href="portfolio.html"> Portfolio </a>
+                <a href="resume.html"> Resume </a>
+                <a href="service.html"> Service </a>
+                <a href="AI.html"> AI </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>

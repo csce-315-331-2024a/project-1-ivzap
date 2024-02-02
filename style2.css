@@ -13,18 +13,34 @@ body, html {
     background-attachment: fixed;
 
   }
+
+
 #menuBox{
   display: none;
 }
 
 #menuButtons{
-  position: absolute;
+  display: flex;
+  position: relative;
+  width: 1000px;
+  height: 50px;;
+  background: rgba(255,255,255,.1);
+  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,.5);
+  border-right: 2px solid rgba(255,255,255,.2);
+  border-bottom: 2px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: space-between;
 }
+
+
 
 #bubbleStyleBox{
   position: relative;
   right: 0;
-  z-index: 1;
+  z-index: 13;
 }
 
 .s{
@@ -54,11 +70,13 @@ body, html {
 }
 
 #bubbleMenu{
+  
   display: flex;
 }
 
 /* Container styling */
 #bubbleMenuBox {
+  
   display: flex;
   justify-content: space-around; /* Evenly distribute items */
   padding: 10px;
@@ -96,20 +114,30 @@ body, html {
 
 /* Link styling */
 #menuButtons a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #000000; /* Blue background color */
-  color: #fff; /* White text color */
+  width: 100%;
+  background: rgba(255,255,255,.1);
+  text-shadow: -5px 20px 9px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
+
+  border-radius: 5px;
+  border-right: 2px solid rgba(255,255,255,.2);
+  border-bottom: 2px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(10px);
+  
+  text-align: center;
+  padding: 3px 5px;
+  color: rgb(255, 255, 255); /* White text color */
   text-decoration: none; /* Remove underline */
-  border-radius: 5px; /* Rounded corners */
-  border: none; /* Remove border */
+  /* border: none; Remove border */
   cursor: pointer; /* Change cursor to pointer on hover */
-  transition: all 0.3s ease; /* Smooth transition for size change */
+  transition: all 0.4s ease; /* Smooth transition for size change */
+  margin-right: 30px;
+  margin-left: 30px;
+
 }
 
 /* Change background color on hover */
 #menuButtons a:hover {
-  background-color: #01c4ff; /* Darker blue on hover */
+  background-color: rgba(255,255,255,0.4);
   transform: scale(1.1); /* Grow the button slightly */
 }
 
@@ -125,35 +153,68 @@ body, html {
 }
 
 .bubbleProjects{
+  
   display: flex;
   flex-direction: column;
-  
+}
+
+
+#bubbleProject1{
+  display: none;
+}
+
+#bubbleProject2{
+  display: none;
+}
+
+#bubbleProject3{
+  display: none;
+}
+
+#bubbleProject4{
+  display: none;
 }
 
 #bubbleProject1{
+  text-shadow: 0px 50px 10px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
   display: flex;
   margin-top: 200px;
-  width: 100%;
-  left: 50%;
-  right: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
   text-align: center;
   flex-direction: column;
-
-
+  background: rgba(255,255,255,.1);
+  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,.5);
+  border-right: 2px solid rgba(255,255,255,.2);
+  border-bottom: 2px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(10px);
 }
+
+
 #bubbleProjectDesc1{
   white-space: pre-line;
+
   font-weight: 10;
 }
 
 #bubbleProject2{
+  text-shadow: 0px 100px 15px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
+
   display: flex;
   margin-top: 200px;
-  width: 100%;
-  left: 50%;
-  right: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
   text-align: center;
   flex-direction: column;
+  background: rgba(255,255,255,.1);
+  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,.5);
+  border-right: 2px solid rgba(255,255,255,.2);
+  border-bottom: 2px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(10px);
 
 
 }
@@ -163,6 +224,95 @@ body, html {
 }
 
 
+
+#bubbleProject3{
+  text-shadow: 0px 150px 30px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
+
+  display: flex;
+  margin-top: 200px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  flex-direction: column;
+  background: rgba(255,255,255,.1);
+  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,.5);
+  border-right: 2px solid rgba(255,255,255,.2);
+  border-bottom: 2px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(10px);
+
+
+}
+#bubbleProjectDesc3{
+  white-space: pre-line;
+  font-weight: 10;
+}
+
+#bubbleProject4{
+  text-shadow: 0px 150px 30px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
+
+  display: flex;
+  margin-top: 200px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  flex-direction: column;
+  background: rgba(255,255,255,.1);
+  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,.5);
+  border-right: 2px solid rgba(255,255,255,.2);
+  border-bottom: 2px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(10px);
+}
+
+#bubbleProjectDesc4{
+  white-space: pre-line;
+  font-weight: 10;
+}
+
+.bubbleGithub{
+  transition: all 0.4s ease; /* Smooth transition for size change */
+  align-self: center;
+}
+
+.bubbleGithub:hover{
+  
+  transform: scale(1.1);
+}
+
+#bubbleResumeDesc{
+  text-shadow: 0px 150px 30px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
+  white-space: pre-line;
+  font-weight: 10;
+  display: flex;
+  margin-top: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  flex-direction: column;
+  background: rgba(255,255,255,.1);
+  box-shadow: 0 25px 45px rgba(0,0,0,.2);
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,.5);
+  border-right: 2px solid rgba(255,255,255,.2);
+  border-bottom: 2px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(10px);
+}
+
+#resumeImage{
+  align-self: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#bubbleResumeBox{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
 .wrapper h1 {
   top: 50%;
@@ -186,7 +336,6 @@ body, html {
   top: 10%;
   left: 10%;
   animation: 4s linear infinite;
-  z-index: 1;
 }
 .dot {
   height: 10px;
@@ -280,6 +429,11 @@ body, html {
     transform: scale(1.3) translateY(-100px) rotate(360deg);
   }
 }
+.resumeText{
+  display: none;
+}
+
+#bubble
 
 .bubbleProjectDesc{
   white-space: pre;

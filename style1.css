@@ -10,10 +10,41 @@ body {
 }
 
 #styleBox{
-    display: none;
+    position: absolute;
+    align-self: flex-start;
+    right: 0;
 }
 
 #bubbleMenuBox{
+    display: none;
+}
+
+#bubbleResumeBox{
+    display: none;
+}
+
+.bubbleProjects{
+    display: none;
+}
+
+#bubbleProject1{
+    display: none;
+  }
+  
+  #bubbleProject2{
+    display: none;
+  }
+  
+  #bubbleProject3{
+    display: none;
+  }
+  
+  #bubbleProject4{
+    display: none;
+  }
+
+
+#bubbleStyleBox{
     display: none;
 }
 

@@ -60,56 +60,7 @@
     </div>
     
     <h1 class="resumeText terminal-text">Resume</h1>
-    <span class="fastType resumeText terminal-text">
-        [EDUCATION]
-
-        Texas A&M University | GPA: 4.0 / 4.0 College Station, Texas
-        Bachelor of Science in Computer Engineering Expected Dec 2024
-        ● Relevant Coursework: CSCE 120, CSCE 222, CSCE 221, ECEN 214, ECEN 248, STATS 211,
-        MATH 251, MATH 308
-
-        [SKILLS]
-
-        Languages: C/C++, Python, ARMv8, Java, Rust, JavaScript, Verilog, BASH, HTML, CSS, SQL
-        Technologies: Git, Linux/Unix, LLVM, Clang, GCC, Cmake, Docker, React, Node.js
-
-        [EXPERIENCE]
-
-        Kershner Trading Group Austin, Texas
-        Software Engineer Intern June 2023 – Aug 2023
-        ● Developed and deployed a Python and C++ call graph tool for traders' scripts, leveraging the
-        Abstract Syntax Tree (AST) modules in both languages, and pushed into production using Docker
-        ● Call graph tool assisted in identifying circular dependencies and risky market orders within multiple
-        traders' scripts
-        ● Wrote documentation for the company's market simulator SDK, subsequently gaining familiarity
-        with CMake
-        ● Converted trader/quant Python scripts to C++ for low latency, which improved speeds by over 200%
-
-        DV Trading Austin, Texas
-        Software Engineer Intern May 2022 – Aug 2022
-        ● Developed the frontend and backend of stock algorithm optimization software using Electron.js
-        ● Reduced algorithm development time by 40% by generating C++ code with optimal parameters
-        ● Improved an algorithm by 60% via statistical techniques, resulting in a daily profit of +$10,000
-        ● Wrote, refactored, and documented over 10,000 lines of code in Python, Rust, and JavaScript
-
-        Kershner Trading Group Austin, Texas
-        Software Engineer Intern May 2021 – Aug 2021
-        ● Built frontend and backend of stock analysis software with Python, JavaScript, Node.js and C++
-        ● Utilized in-depth understanding of the company's tech stack and documentation
-        ● Automated an alert system to detect down servers, saving the IT department 7 hours weekly
-        ● Wrote and documented over 5,000 lines of code for various libraries and APIs in Python and C++
-
-        [PROJECTS & EXTRACURRICULARS]
-
-        Custom Programming SHELL
-        ● Wrote an entire programming shell that supports sign expansion and i/o redirection using IPC
-        ● Implemented using C/C++ in addition to unix system api calls such as fork, exec, and pipe
-        OpenJDK Systems Research (Texas A&M University)
-        ● Integrated marking of RDD objects into the OpenJDK G1 garbage collector source code using the
-        Java Native Interface (JNI) to enable caching of Spark RDDs
-        ● Required knowledge of G1 heap allocation(eden, survivor, old), object tracing, and marking phase
-
-    </span>
+    <img class="resumeText" src="Zaplatar.Ivan-1.png" width="1000px">
     <div>
         <a class="terminal-text" id="resumeLink" href="Zaplatar.Ivan.pdf">Download Resume</a>
     </div>
@@ -149,7 +100,9 @@
         <h1 class="terminal-text resumeText">Area of Interest</h1>
 
         <span class="fastType terminal-text resumeText">
-            This is a description of my area of interest.
+            Throughout my academic tenure at Texas A&M University, a profound interest in systems-level programming gradually took root. This inclination gained momentum as I progressed through advanced courses in Electrical and Computer Engineering (ECEN) and Computer Science and Engineering (CSCE).
+                A pivotal juncture in this intellectual evolution was marked by my enrollment in CSCE 313, a course instrumental in laying the foundation for my comprehension of systems programming. This class provided a gateway into the intricate domain of system calls and user-level program APIs for Unix operating systems. The curriculum, immersive in nature, not only imparted theoretical knowledge but also facilitated hands-on experiences. This immersive approach cultivated a deep understanding of the complexities inherent in crafting software that operates at the fundamental level of computing systems.
+                As I navigated the intricacies of system-level programming, I uncovered the inherent elegance within the architecture of computing systems. The intricate interplay between hardware and software, combined with the challenge of optimizing performance at such a foundational level, captivated my intellectual curiosity. Through engaging in projects and assignments, I refined my ability to develop efficient and robust software that interfaces directly with the underlying hardware—a skill set proving invaluable in both academic and professional pursuits.
         </span>
     </div>
 
@@ -158,7 +111,6 @@
 <body>
     
     <div class="wrapper">
-        <h1>I'm Ivan Zaplatar</h1>
         <div><span class="dot"></span></div>
         <div><span class="dot"></span></div>
         <div><span class="dot"></span></div>
@@ -175,20 +127,63 @@
         <div><span class="dot"></span></div>
         <div><span class="dot"></span></div>
       </div>
-  
+      
       <div id="bubbleStyleBox">
         <button onclick="toggleStyleSheet()">Change Style</button>
       </div>
-      <div id="bubbleMenuBox">
-        
-        <div id="menuButtons">
-          <a href="index.html"> Home </a>
-          <a href="portfolio.html"> Portfolio </a>
-          <a href="resume.html"> Resume </a>
-          <a href="service.html"> Service </a>
-          <a href="AI.html"> AI </a>
-        </div>
+      <div id="bubbleResumeBox">
+        <div id="bubbleMenuBox">
+            <div id="menuButtons">
+              <a href="index.html"> Home </a>
+              <a href="portfolio.html"> Portfolio </a>
+              <a href="resume.html"> Resume </a>
+              <a href="service.html"> Service </a>
+              <a href="AI.html"> AI </a>
+            </div>
+          </div>
+          <div id="resumeImage">
+              <img src="Zaplatar.Ivan-1.png" width="1000">
+          </div>
+          <div id="bubbleResumeDesc">
+            <span>
+                <h1>Skills Description</h1>
+                Specializing in systems programming, I bring a robust skill set
+                that spans programming languages such as
+                C/C++, Python, ARMv8, Java, Rust, JavaScript, Verilog, BASH,
+                HTML, CSS, and SQL, coupled with expertise in
+                technologies like Git, Linux/Unix, LLVM, Clang, GCC, CMake,
+                Docker, React, and Node.js.
+    
+                As evidenced by my roles as a Software Engineer Intern, I have
+                made significant contributions to low-level
+                programming.
+                Notably, within the xv6 operating system, I implemented custom
+                system calls, including sysinfo and trace.
+                The sysinfo system call provides valuable insights into system
+                resources, displaying information such as
+                available free memory and unused processes.
+                Additionally, the trace system call allows for the monitoring of
+                specific system calls, offering a detailed
+                trace that is printed to stdout.
+                These implementations showcase my proficiency in systems
+                programming and my ability to work at a low level,
+                contributing to the enhancement and customization of operating
+                system functionality.
+                
+                My dedication to systems programming is further demonstrated by
+                my involvement in projects that require a
+                deep understanding of the intricacies of operating systems and
+                the implementation of custom features.
+                <h1>Area of Interest</h1>
+                Throughout my academic tenure at Texas A&M University, a profound interest in systems-level programming gradually took root. This inclination gained momentum as I progressed through advanced courses in Electrical and Computer Engineering (ECEN) and Computer Science and Engineering (CSCE).
+                A pivotal juncture in this intellectual evolution was marked by my enrollment in CSCE 313, a course instrumental in laying the foundation for my comprehension of systems programming. This class provided a gateway into the intricate domain of system calls and user-level program APIs for Unix operating systems. The curriculum, immersive in nature, not only imparted theoretical knowledge but also facilitated hands-on experiences. This immersive approach cultivated a deep understanding of the complexities inherent in crafting software that operates at the fundamental level of computing systems.
+                As I navigated the intricacies of system-level programming, I uncovered the inherent elegance within the architecture of computing systems. The intricate interplay between hardware and software, combined with the challenge of optimizing performance at such a foundational level, captivated my intellectual curiosity. Through engaging in projects and assignments, I refined my ability to develop efficient and robust software that interfaces directly with the underlying hardware—a skill set proving invaluable in both academic and professional pursuits.
+            </span>
+          </div>
+          
       </div>
+      
+
 
 
 </body>
