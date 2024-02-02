@@ -1,237 +1,240 @@
 body {
-    background-color: #2C001E; 
-    color: #FFFFFF; 
-    font-family: monospace; 
-    padding: 20px; 
+  background-color: #2c001e;
+  color: #ffffff;
+  font-family: monospace;
+  padding: 20px;
 }
 
-.wrapper{
-    display: none;
+.wrapper {
+  display: none;
 }
 
-#styleBox{
-    position: absolute;
-    align-self: flex-start;
-    right: 0;
+#styleBox {
+  position: absolute;
+  align-self: flex-start;
+  right: 0;
 }
 
-#bubbleMenuBox{
-    display: none;
+#bubbleMenuBox {
+  display: none;
 }
 
-#bubbleResumeBox{
-    display: none;
+#bubbleResumeBox {
+  display: none;
 }
 
-.bubbleProjects{
-    display: none;
+.bubbleProjects {
+  display: none;
 }
 
-#bubbleProject1{
-    display: none;
-  }
-  
-  #bubbleProject2{
-    display: none;
-  }
-  
-  #bubbleProject3{
-    display: none;
-  }
-  
-  #bubbleProject4{
-    display: none;
-  }
-
-#bubblesServiceBox{
-    display: none;
+#bubbleProject1 {
+  display: none;
 }
 
+#bubbleProject2 {
+  display: none;
+}
 
-#bubbleStyleBox{
-    display: none;
+#bubbleProject3 {
+  display: none;
+}
+
+#bubbleProject4 {
+  display: none;
+}
+
+#bubblesServiceBox {
+  display: none;
+}
+
+#bubbleStyleBox {
+  display: none;
 }
 
 @keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#intro{
+  display: flex;
+  flex-direction: column;
+  white-space: pre-line;
+}
+
+#intoAbout{
+  display: flex;
 }
 
 a {
-font-size: 15px;
-color: #FFFFFF;
-text-decoration: none; 
-position: relative;
-overflow: hidden;
-visibility: hidden;
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 a:hover {
-animation: blink 1s infinite; 
+  animation: blink 1s infinite;
 }
 
 .cmd {
-    font-size: 15px;
-    color: #00FF00;
-    display: inline-block;
-    animation: blink 1s infinite; 
+  font-size: 15px;
+  color: #00ff00;
+  display: inline-block;
+  animation: blink 1s infinite;
 }
 
 .terminal-text {
-    font-family: monospace;
-    white-space: pre;
-    visibility: hidden;
+  font-family: monospace;
+  white-space: pre;
+  visibility: hidden;
 }
 
 /* Webpage ASCII art START */
-.asciiBox{
-    color: #FFFFFF; 
-    width: 100%; 
-    overflow: hidden; 
-    display: flex; 
-    flex-direction: row;
+.asciiBox {
+  color: #ffffff;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
 }
 
-.dragon{
-    color: #FFFFFF; 
-    font-size: 10px;
-    display: block;
+.dragon {
+  color: #ffffff;
+  font-size: 10px;
+  display: block;
 }
 
-.asciiLetters{
-    color: #FFFFFF;
+.asciiLetters {
+  color: #ffffff;
 }
 
 /* Webpage ASCII art END */
 
-
 /* Webpage Menu START*/
-#menuBox{
-    display: flex;
-    flex-direction: column;
+#menuBox {
+  display: flex;
+  flex-direction: column;
 }
 
-#menuTerm{
-    display: flex;
-    flex-direction: row;
-    display: visible;
+#menuTerm {
+  display: flex;
+  flex-direction: row;
+  display: visible;
 }
 
-#menuTermUser{
-    font-size: 15px;
-    color: #00FF00;
-
+#menuTermUser {
+  font-size: 15px;
+  color: #00ff00;
 }
 
-#menuTermPath{
-    font-size: 15px;
-    color: #4444f0;
+#menuTermPath {
+  font-size: 15px;
+  color: #4444f0;
 }
 
-#menuTermDollar{
-    font-size: 15px;
-    color: #ffffff;
+#menuTermDollar {
+  font-size: 15px;
+  color: #ffffff;
 }
 
-#menuTermBlinkHidden{
-    opacity: 0;
-    color: #ffffff;
+#menuTermBlinkHidden {
+  opacity: 0;
+  color: #ffffff;
 }
 
-#menuTermBlink{
-    color: #ffffff;
+#menuTermBlink {
+  color: #ffffff;
 }
 
-.menuOption{
-    font-size: 15px;
-    color: #FFFFFF;
+.menuOption {
+  font-size: 15px;
+  color: #ffffff;
 }
 /* Webpage Menu END*/
 
 /* Webpage Portfolio START */
-#portfolioBox{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
+#portfolioBox {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
-#portfolioBoxGithub{
-    padding: 20px;
+#portfolioBoxGithub {
+  padding: 20px;
 }
 
-.portfolioBoxProj{
-    padding: 10px;
-    flex-direction: column;
+.portfolioBoxProj {
+  padding: 10px;
+  flex-direction: column;
 }
-.portfolioBoxProjContent{
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    flex-shrink: 1;
+.portfolioBoxProjContent {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
-.portfolioBoxProjContentElm{
-    width: 50%; 
-    flex-grow: 1; 
-    flex-shrink: 1;
+.portfolioBoxProjContentElm {
+  width: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
-.portfolioBoxProjContentLink{
-    color: #4444f0;
+.portfolioBoxProjContentLink {
+  color: #4444f0;
 }
 
 /* Webpage Portfolio END */
 
 /* Webpage Resume START */
-#resumeLink{
-    font-size: 15px; 
-    color: #4444f0;
+#resumeLink {
+  font-size: 15px;
+  color: #4444f0;
 }
 
-#resumeContent{
-    padding: 10px; 
-    display: flex; 
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
+#resumeContent {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
-.resumeText{
-    white-space: pre-line;
+.resumeText {
+  white-space: pre-line;
 }
 /* Webpage Resume END */
 
 /* Webpage Service START */
 
-#serviceBox{
-    display: flex; 
-    flex-direction: row; 
-    flex-grow: 1; 
-    flex-shrink: 1;
+#serviceBox {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
-.serviceBoxElm{
-    width: 50%; 
-    flex-grow: 1; 
-    flex-shrink: 1;    
+.serviceBoxElm {
+  width: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
-#serviceElmFuture{
-    display: flex; 
-    flex-direction: column; 
-    flex-grow: 1; 
-    flex-shrink: 1;
+#serviceElmFuture {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 /* Webpage Service END */
-
-
-
-

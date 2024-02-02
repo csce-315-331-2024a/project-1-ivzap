@@ -18,7 +18,7 @@ html {
   display: none;
 }
 
-#bubbleServiceFuture{
+#bubbleServiceFuture {
   white-space: pre-line;
   font-weight: 10;
 }
@@ -39,7 +39,7 @@ html {
   justify-content: space-between;
 }
 
-#bubbleServiceBox{
+#bubbleServiceBox {
   text-shadow: 0px 50px 10px rgba(14, 14, 14, 0.9); /* Horizontal offset, vertical offset, larger blur radius, and color */
   display: flex;
   margin-top: 200px;
