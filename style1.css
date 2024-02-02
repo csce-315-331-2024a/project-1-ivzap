@@ -11,8 +11,8 @@ body {
 
 #styleBox {
   position: absolute;
-  align-self: flex-start;
-  right: 0;
+  left: 0;
+  top: 0;
 }
 
 #bubbleMenuBox {
